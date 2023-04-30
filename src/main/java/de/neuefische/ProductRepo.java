@@ -20,10 +20,4 @@ public class ProductRepo {
         return products.get(i);
     }
     //##########
-    @Override
-    public String toString() {
-        return "ProductRepo{" +
-                "products=" + products +
-                '}';
-    }
 }
