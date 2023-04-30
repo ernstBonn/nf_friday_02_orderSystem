@@ -1,15 +1,29 @@
 package de.neuefische;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public class ProductRepo {
-    private Set<Product> products;
+    private ArrayList<Product> products;
     //##########
-    public Map<String, Product> productList(){
-        return null;
+    public ProductRepo(ArrayList<Product> products) {
+        this.products = products;
     }
-    public Product get(String productId){
-        return null;
+    //##########
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+    public Product getProduct (int i){
+        return products.get(i);
+    }
+    //##########
+    @Override
+    public String toString() {
+        return "ProductRepo{" +
+                "products=" + products +
+                '}';
     }
 }

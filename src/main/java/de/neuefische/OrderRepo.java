@@ -1,17 +1,20 @@
 package de.neuefische;
 
+import java.util.List;
 import java.util.Map;
 
 public class OrderRepo {
-    private Map<String, Order> orders;
+    private List<Order> orders;
     //##########
-    public Map<String, Order> orderList(){
-        return null;
+    public List<Order> orderList(){
+        return orders;
     }
-    public Order getOrder(){
-        return null;
+    public Order getOrder(int i){
+
+        return orderList().get(i);
     }
-    public Order addOrder(){
-        return null;
+    public Order addOrder(Order order){
+        orders.add(order);
+        return order;
     }
 }
